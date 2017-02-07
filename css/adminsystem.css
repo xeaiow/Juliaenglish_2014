@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'fonts';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/cwtexhei/v3/cwTeXHei-zhonly.ttf) format('truetype');
+}
+
+body{
+	font-family: 'fonts', 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+#newpost, #post_submit{
+	margin-top: 20px;
+}
+
+#post_title, #type_title{
+	margin-bottom: 20px;
+	width: 400px;
+	display: inline;
+}
+
+#admin_menu a{
+	color: #333;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#admin_menu i{
+	padding-right: 5px;
+}

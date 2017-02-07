@@ -1,0 +1,23 @@
+body{
+	background: url(../images/editpostbg.png);
+}
+
+.input-group{
+	-moz-box-shadow: -1px 1px 1px #5c5c5c;
+	-webkit-box-shadow: -1px 1px 1px #5c5c5c;
+	box-shadow: -1px 1px 1px #5c5c5c;
+}
+
+#submit{
+	text-align: center;
+}
+
+#edit{
+	color: green;
+	font-size: 20px;
+}
+
+#del{
+	color: crimson;
+	font-size: 20px;
+}

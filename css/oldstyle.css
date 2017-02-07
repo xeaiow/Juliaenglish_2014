@@ -1,0 +1,108 @@
+#warrper{
+	margin: 0 auto;
+}
+
+#leftmenu{ /*左邊選單*/
+	width: 270px;
+	border-radius: 8px;
+	background: url(../img/bg2.png);
+}
+
+.iconimg{ /*左邊選單的icon*/
+	width: 24px;
+	height: 24px;
+}
+
+#newborder{
+	width: 400px;
+	height: 420px;
+	margin-left: 190px;
+	background-color: rgba(255,255,255,0);
+	border-color: rgba(255,255,255,0);
+	background-image: url(../img/border1.png);
+}
+
+#newinfo{ /*右邊最新資訊選單*/
+	font-size: 25px;
+	text-shadow:-1px 1px 5px #444;
+	margin-left: 30px;
+	margin-top: 45px;
+	color: #FFF;
+}
+
+#fb{
+	margin-top: 291px;
+	margin-left: 249px;
+	-moz-box-shadow: 1px 1px 2px #3d3d3d;
+	-webkit-box-shadow: 1px 1px 2px #3d3d3d;
+	box-shadow: 1px 1px 2px #3d3d3d;
+}
+
+#newinfo a{
+	color: #DDD;
+}
+
+#newinfo a:hover{
+	color: #FFF;
+}
+
+#footer {
+
+	height: 100px;
+
+	-moz-box-shadow:inset 0px 5px 17px #000000;
+	-webkit-box-shadow:inset 0px 5px 17px #000000;
+	box-shadow:inset 0px 5px 17px #000000;
+	background-image: url(../img/bg.png);
+}
+
+   
+
+#address{ /*住址與電話*/
+	font-size: 20px;
+	color: #DDD;
+	margin-left: 90px;
+	text-shadow:-1px 5px 7px #000000;
+}
+
+#time{ /*營業時間*/
+	font-size: 20px;
+	color: #DDD;
+	margin-left: 580px;
+	margin-top: -56px;
+	text-shadow:-1px 5px 7px #000000;
+}
+
+#centerpic{
+	margin-left: 100px;
+}
+
+a{ /*超連結*/
+	text-decoration: none;	
+	color: #333;
+}
+
+a:hover{ /*超連結滑鼠移過時*/
+	text-decoration: none;
+	-moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	-o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	-ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;	
+	color: crimson;
+}
+
+#leftmenu a{ /*超連結*/
+	text-decoration: none;	
+	color: #DDD;
+}
+
+#leftmenu a:hover{ /*超連結滑鼠移過時*/
+	text-decoration: none;
+	color: yellowgreen;
+}
+
+.login{
+	width: 200px;
+	margin: 20px auto;
+}
