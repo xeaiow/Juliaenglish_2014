@@ -1,0 +1,56 @@
+.article_title a {
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.adv_pic {
+    width: 128px !important;
+    height: 128px !important;
+}
+
+.art_time {
+    font-size: 12px;
+    font-style: italic;
+    color: #613123;
+}
+
+.article_top a {
+    color: #555 !important;
+}
+
+.art_top_time {
+    font-size: 12px;
+    font-style: italic;
+    color: #16335F;
+}
+
+.article-title{
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.article-top-title {
+    color: #16335F !important;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#about {
+    margin-top: 30px;
+}
+
+#about h1 {
+    color: #3F485B !important;
+    cursor: pointer;
+}
+
+#maps {
+    background-color: #3F485B !important;
+    margin-top: 40px !important;
+}
+
+#content, #content div a {
+    color: #EEE !important;
+}

@@ -10,16 +10,17 @@
 	<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="css/adminsystem.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<title>管理員系統 - 林錦國際文創</title>
+	<title>管理員系統</title>
 </head>
 <body>
 
 	<?php
-		if (empty($_SESSION['nickname']) && empty($_SESSION['password'])) {
+	if (empty($_SESSION['nickname']) && empty($_SESSION['password'])) {
 
-			echo '<meta http-equiv=REFRESH CONTENT=0;url=login.php>';
-			exit();
-		}
+		echo '<meta http-equiv=REFRESH CONTENT=0;url=login.php>';
+		exit();
+
+	}
 	?>
 
 	<nav class="navbar navbar-default">
@@ -72,7 +73,7 @@
 	<div class="row">
 		<div class="col-md-2" id="admin_menu">
 			<ul class="nav nav-pills nav-stacked">
-				<li><a href="editpost.php"><i class="fa fa-pencil-square-o"></i> 編輯文章</a></li>
+				<li><a href="postlist.php"><i class="fa fa-pencil-square-o"></i> 編輯文章</a></li>
 				<!-- <li><a href="score.php"><i class="fa fa-file-excel-o"></i> 新增成績單</a></li> -->
 				<li><a data-toggle="modal" data-target="#updateadv"><i class="fa fa-bullhorn"></i> 圖片輪播</a></li>
 				<li><a data-toggle="modal" data-target="#mc"><i class="fa fa-th"></i> 編輯月曆</a></li>
@@ -86,9 +87,9 @@
 			<div class="tabbable"> <!-- Only required for left/right tabs -->
 
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#newpost" data-toggle="tab">文章</a></li>
+					<li class="active"><a href="#newpost" data-toggle="tab"><i class="fa fa-comment"></i> 文章</a></li>
 					<!--<li><a href="#tab2" data-toggle="tab"><i class="fa fa-video-camera"></i> 新增影片</a></li>-->
-					<li><a href="#2" data-toggle="tab">教材</a></li>
+					<li><a href="#2" data-toggle="tab"><i class="fa fa-book"></i> 教材</a></li>
 					<!-- <li><a href="#3" data-toggle="tab"><i class="fa fa-book"></i> 上傳聽力教材</a></li> -->
 				</ul>
 
@@ -115,7 +116,11 @@
 									<option value="images/post/14.png">喜歡</option>
 								</optgroup>
 							</select>
-							<!-- <input type="checkbox" name="art_top" value="1"> 置頂 -->
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="art_top" value="1"> 置頂文章
+								</label>
+							</div>
 							<textarea id="content" name="content" class="ckeditor"></textarea>
 							<input type="submit" name="ok" value="發佈" class="btn btn-primary btn-sm" id="post_submit">
 						</form>
