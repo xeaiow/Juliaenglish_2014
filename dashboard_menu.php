@@ -5,6 +5,7 @@
     <a class="item" id="adv-management"><i class="image icon"></i>輪播</a>
     <a class="item" id="mc-management"><i class="calendar icon"></i>月曆</a>
     <a class="item" href="album.php"><i class="video icon"></i>影片</a>
+    <a class="item" href="travel.php"><i class="setting icon"></i>林錦國際文創</a>
 </div>
 
 <!-- 圖片輪播 -->
