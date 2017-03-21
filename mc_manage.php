@@ -15,8 +15,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger-theme-future.min.css">
     <title>後台系統 - 林錦英語教室</title>
     <style media="screen">
-        body{
+        @import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);
+        body {
             overflow-x: hidden;
+            background-image:url('https://i.imgur.com/ND1KI66.jpg');
+			background-attachment: fixed;
+			background-position: center center;
+			background-size: cover;
+        }
+        #container {
+            margin-top: 1px;
+            background-color: rgba(255, 255, 255, .1); !important;
+            border-radius: 10px;
+        }
+        .secondary a {
+            font-family: 'cwTeXHei', sans-serif;
+            color: #EEE !important;
+            font-size: 18px;
+        }
+        .item {
+            font-family: 'cwTeXHei', sans-serif;
+            font-size: 15px;
+        }
+        span {
+            color: #DDD !important;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -28,7 +51,7 @@
     ?>
 
     <div class="ui container" style="margin:50px;">
-        <div class="ui grid">
+        <div class="ui grid" id="container">
             <div class="four wide column">
                 <?php require 'dashboard_menu.php' ?>
             </div>
