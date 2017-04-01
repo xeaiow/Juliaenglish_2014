@@ -21,12 +21,12 @@
 
 <div class="row">
   <div class="col-md-12">
-  	<?php
+  	<?php 
   		require 'config/dbconfig.php';
   		$mc    = "SELECT * FROM mc ORDER BY name DESC";
   		$query = mysql_query($mc);
   		while ($row = mysql_fetch_array($query)) {
-  			echo " <div class=\"well\" style=\"font-size:40px;\"><img src=\"$row[2]\" /> </div> ";
+  			echo " <div class=\"well\" style=\"font-size:40px;\">月份：$row[0]<br/><img src=\"$row[1]\" /> </div> ";
   		}
   		mysql_close($link);
   	?>
