@@ -1,46 +1,52 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-	<meta charset="UTF-8">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger-theme-future.js"></script>
-    <script src="ckeditor/ckeditor.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
+    <meta charset="UTF-8">
+    <title>學員登入 - 林錦英語教室</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="assets/sdlogin_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger-theme-future.min.css">
-	<title>學員登入 - 林錦英語教室</title>
-	<style>
-		body{
-			background-image:url('https://i.imgur.com/eAEEAPU.jpg');
-			background-attachment: fixed;
-			background-position: center center;
-			background-size: cover;
-			overflow: hidden;
-		}
-	</style>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/js/messenger-theme-future.js"></script>
 </head>
+
+<?php
+
+    if (!empty($_SESSION['stlogin']) && !empty($_SESSION['pw'])) {
+
+            echo '<meta http-equiv=REFRESH CONTENT=0;url=st_dashboard.php>';
+            exit();
+    }
+?>
+
 <body>
+    <div class="cont">
+        <div class="demo">
+            <div class="login">
+                <div class="login__check"></div>
+                <div class="login__form">
+                    <div class="login__row">
+                        <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                            <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+                        </svg>
+                        <input type="text" class="login__input name" placeholder="Username" id="username" />
+                    </div>
+                    <div class="login__row">
+                        <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+                            <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+                        </svg>
+                        <input type="password" class="login__input pass" placeholder="Password" id="password"/>
+                    </div>
+                    <button type="button" class="login__submit" id="login">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="ui container" style="margin:50px;">
-		<div class="ui grid">
-			<div class="five wide column centered ui form">
-				<div class="field">
-					<label>User</label>
-					<input type="text" id="username">
-				</div>
-				<div class="field">
-					<label>Password</label>
-					<input type="password" id="password">
-				</div>
-				<button class="ui basic button" id="login" type="submit">Login</button>
-			</div>
-		</div>
-	</div>
-
-	<script>
+    <script>
 
 		$("#username, #password").keypress(function(e){
 
@@ -96,6 +102,7 @@
 			});
 		}
 	</script>
+
 
 </body>
 </html>

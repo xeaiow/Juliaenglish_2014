@@ -1,0 +1,80 @@
+    [
+      {
+        "id": "1",
+        "name": "高一菁英班 (六)",
+        "code": "a0",
+        "t_m": "function/Grammar & Reading B/"
+      },
+      {
+        "id": "2",
+        "name": "高一資優班 (日)",
+        "code": "b0",
+        "t_m": "function/Grammar & Reading A"
+      },
+      {
+        "id": "3",
+        "name": "高二魔力寫作班",
+        "code": "c0",
+        "t_m": "function/Translating &Writing"
+      },
+      {
+        "id": "4",
+        "name": "高三資優衝刺模考班",
+        "code": "d0",
+        "t_m": "function/Senior CEEISC"
+      },
+      {
+        "id": "5",
+        "name": "指考翻譯寫作班",
+        "code": "e0",
+        "t_m": "function/Senior CEEISS"
+      },
+      {
+        "id": "6",
+        "name": "中級暨中高級英檢聽力班",
+        "code": "f0",
+        "t_m": "function/Listening & Vocabulary Senior"
+      },
+      {
+        "id": "7",
+        "name": "新聞閱讀搶讀班",
+        "code": "g0",
+        "t_m": "function/PISA A Class"
+      },
+      {
+        "id": "8",
+        "name": "PISA 英檢預備 B 班",
+        "code": "h0",
+        "t_m": "function/PISA B Class"
+      },
+      {
+        "id": "9",
+        "name": "PISA 英檢初級班",
+        "code": "i0",
+        "t_m": "function/PISA Junior"
+      },
+      {
+        "id": "10",
+        "name": "PISA 英檢文法衝刺班",
+        "code": "j0",
+        "t_m": "function/PISA Senior"
+      },
+      {
+        "id": "11",
+        "name": "PISA 英檢初級聽力班",
+        "code": "k0",
+        "t_m": "function/Listening & Vocabulary Junior"
+      },
+      {
+        "id": "12",
+        "name": "高一先修班",
+        "code": "l0",
+        "t_m": "function/PRE-Grammar%20&%20Reading"
+      },
+      {
+        "id": "13",
+        "name": "PISA 菁英進階班",
+        "code": "m0",
+        "t_m": "function/PISA%20Elite%20Advanced"
+      }
+    ]
