@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/messenger/1.5.0/css/messenger-theme-future.min.css">
-    <title>學生資訊系統 - 林錦英語教室</title>
+    <title>翻轉教室 - 林錦英語教室</title>
     <style media="screen">
         * {
             font-family: '微軟正黑體';
@@ -85,17 +85,17 @@
                     </div>
                 </div>
 
-                <div class="seven wide column">
+                <div class="ten wide column">
                     <div class="ui segment center aligned" id="mycourse">
-                        <h1 class="ui header"><img src="https://i.imgur.com/hDd5HD4.png" width="24" alt="">Course List</h1>
+                        <h1 class="ui header"><img src="https://i.imgur.com/hDd5HD4.png" width="24" alt="">Flipped classroom</h1>
                     </div>
                 </div>
 
-                <div class="five wide column">
+                <!-- <div class="five wide column">
                     <div class="ui segment center aligned">
-                        <h1 class="ui header"><img src="https://i.imgur.com/OyjRou3.png" width="24" alt=""><br /><a href="<?=$base_url?>flip_class.php">翻轉教室已經開始囉！</a></h1>
+                        <h1 class="ui header"><img src="https://i.imgur.com/OyjRou3.png" width="24" alt="">Record</h1>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -138,18 +138,46 @@
                         arr.push(response.result[x]);
                     }
 
-                    // 把我有的課程都 appen
-                    for ( var i = 0; i < arr.length; i++ ) {
 
-                        if ( arr[i] == course_code[i] ) {
+                    $.ajax({
+                        type: 'post',
+                        url: '<?=$base_url?>ajax/member/getfliproom.php',
+                        dataType: 'json',
+                        error: function (xhr) {
+                        },
+                        success: function (response) {
 
-                            $("#mycourse").append(
-                                '<div class="ui segment">' +
-                                    '<p><img src="https://i.imgur.com/dZNu2Bd.png" width="32"><a href="' + course_list[i].t_m + '">' + course_list[i].name + '</a></p>' +
-                                '</div>'
-                            );
+                            var response = $.parseJSON(JSON.stringify(response));
+
+                            if (response.status == true) {
+
+                                $.each(response.result, function(i) {
+
+                                    if ($.inArray(response.result[i].types, arr) > -1) {
+
+                                        $("#mycourse").append(
+                                            '<div class="ui segment">' +
+                                                '<p><a href="' + response.result[i].url + '">' + response.result[i].course + '</a></p>' +
+                                            '</div>'
+                                        );
+                                    }
+                                });
+                            }
                         }
-                    }
+                    });
+
+                    // // 把我有的課程都 appen
+                    // for ( var i = 0; i < arr.length; i++ ) {
+                    //
+                    //     if ( arr[i] == course_code[i] ) {
+                    //
+                    //         $("#mycourse").append(
+                    //             '<div class="ui segment">' +
+                    //                 '<p><img src="https://i.imgur.com/dZNu2Bd.png" width="32"><a href="' + course_list[i].t_m + '">' + course_list[i].name + '</a></p>' +
+                    //             '</div>'
+                    //         );
+                    //     }
+                    // }
                 }
             }
         });
